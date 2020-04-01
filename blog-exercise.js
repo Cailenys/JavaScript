@@ -33,7 +33,7 @@ class Article {
 
 
 
- /  output(element = null) {
+ output(element = null) {
     if (element !== null) {
       // Populate the element.
       element.innerHTML += `
