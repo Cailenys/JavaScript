@@ -52,9 +52,6 @@ console.log(`This ia a literal template ${title}`);
 console.log(`This is the content ${content}`);
 
 
-
-
-
 const blogArticles = [
   new Article(
     'First Day of Class (C#)',
