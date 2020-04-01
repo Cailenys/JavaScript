@@ -45,6 +45,11 @@ class Article {
 
    output(element = null) {
 
+<<<<<<< HEAD
+=======
+
+ output(element = null) {
+>>>>>>> 6a7b144764eae900316d92501f8c9719463c23ce
     if (element !== null) {
       // Populate the element.
       element.innerHTML += `
@@ -62,9 +67,6 @@ class Article {
 
 console.log(`This ia a literal template ${title}`);
 console.log(`This is the content ${content}`);*/
-
-
-
 
 
 const blogArticles = [
