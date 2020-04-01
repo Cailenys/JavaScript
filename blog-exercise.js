@@ -15,6 +15,15 @@
  * - If you are adding functions or using methods, use ES6 standard.
  */
 
+let contentpage = {
+  title: `Template literal: output JS variable value in a multi-line string`,
+  content: `Content`,
+  blogContent() {
+      return `Blog content ${this.title} ${this.content}`;
+  }
+
+};
+
 class Article {
   constructor(title = 'Blog Title', content = 'Lorem ipsum...') {
     this.title = title;
@@ -22,7 +31,9 @@ class Article {
   }
 
 
-  output(element = null) {
+
+
+ /  output(element = null) {
     if (element !== null) {
       // Populate the element.
       element.innerHTML += `
@@ -35,6 +46,7 @@ class Article {
    `;
     }
   }
+
 }
 console.log(`This ia a literal template ${title}`);
 console.log(`This is the content ${content}`);
