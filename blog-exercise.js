@@ -16,39 +16,28 @@
  */
 
 class Article {
-  constructor ( title = 'Blog Title', content = 'Lorem ipsum...' )
-  {
+  constructor(title = 'Blog Title', content = 'Lorem ipsum...') {
     this.title = title;
     this.content = content;
   }
-  output (element = null)
 
-  {
-    // TODO: Prepare output to the browser...
-    // TODO: Use template literals.
+
+  output(element = null) {
+    if (element !== null) {
+      // Populate the element.
+      element.innerHTML += `
+         <dl> This is dynamic HTML! Wow! 
+           <dt>Title:</dt>
+           <dd>${this.title}</dd> Template literal: output JS variable value in a multi-line string (\`\`).
+           <dt>Content:</dt>
+           <dd>${this.content}</dd>
+          </dl>
+   `;
+    }
   }
 }
-
-
-  // Make sure something was passed in.
-  if ( element !== null )
-  {
-    // Populate the element.
-    element.innerHTML += `
-    //   <dl> This is dynamic HTML! Wow! 
-         <dt>Title:</dt>
-         <dd>${this.title}</dd> Template literal: output JS variable value in a multi-line string (\`\`).
-      //   Otherwise we need to do concatenation! 
-          <dt>Content:</dt>
-        //<dd>${this.content}</dd>
-       
-     // </dl>
-   // `;
- }
-//{   // TODO: Prepare output to the browser...
-    // TODO: Use template literals.
- // }
-//}
+console.log(`This ia a literal template ${title}`);
+console.log(`This is the content ${content}`);
 
 
 
@@ -85,10 +74,9 @@ const blogArticles = [
 //new.output( mytext ); //
 
 
-for ( let article of blogArticles )
-{
-  console.log( Article ); // Output each product in console.
- // new.output( mytext );// 
+for (let article of blogArticles) {
+  console.log(Article); // Output each product in console.
+  // new.output( mytext );// 
 }
 
 
