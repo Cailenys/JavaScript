@@ -15,42 +15,21 @@
  * - If you are adding functions or using methods, use ES6 standard.
  */
 
-// Add an element to an array.
- const blogContent =[ 'Title', 'Subtitles', 'Paragraphs' ];
 
- blogContent.push('Sentences');
-
- console.log(blogContent )
-
-
-
-
-const contentpage = {
-  title: `Template literal: output JS variable value in a multi-line string`,
-  content: `Content`,
-  blogContent() {
-      return `Blog content ${this.title} ${this.content}`;
-  }
-
-};
-
-
-
+// Creating a object using ES6 standard.
+ 
 class Article {
-  constructor(title = 'Blog Title', content = 'Lorem ipsum...') {
+  constructor (title = 'Blog Title', content = 'Lorem ipsum...') {
     this.title = title;
     this.content = content;
   }
 
+// Use a template literal.
 
-   output(element = null) {
+   output (element = null) {
 
-<<<<<<< HEAD
-=======
-
- output(element = null) {
->>>>>>> 6a7b144764eae900316d92501f8c9719463c23ce
     if (element !== null) {
+
       // Populate the element.
       element.innerHTML += `
          <dl> This is dynamic HTML! Wow! 
@@ -64,10 +43,6 @@ class Article {
   }
 
 }
-
-console.log(`This ia a literal template ${title}`);
-console.log(`This is the content ${content}`);*/
-
 
 const blogArticles = [
   new Article(
@@ -96,13 +71,23 @@ const blogArticles = [
   )
 ];
 
-//const mytext = document.body; // Target body.
-//new.output( mytext ); //
 
+// Add an element to an array.
+let newElement = new Article (   
+  'My new Title',
+  'New content',
+ );
+
+// Add an element to an array.
+blogArticles.splice ( 0,0,newElement);
+
+
+// Output into the DOM.
+
+let htmlContent = document.querySelector('body');
 
 for (let article of blogArticles) {
-  console.log(Article); // Output each product in console.
-  // new.output( mytext );// 
-}
+   article.output( htmlContent)
+ }
 
 
